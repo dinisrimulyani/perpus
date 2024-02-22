@@ -41,5 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/buku/store', [BukuController::class, 'store'])->name('buku.store');
     Route::delete('/buku/hapus/{id}', [BukuController::class, 'hapus'])->name('buku.hapus');
     Route::delete('/kategori/hapus/{id}', [KategoriController::class, 'hapus'])->name('kategori.hapus');
+    Route::get('/buku/edit/{id}', [BukuController::class, 'edit'])->name('buku.edit');
+    Route::patch('/buku/update/{id}', [BukuController::class, 'update'])->name('buku.update');
 });
 

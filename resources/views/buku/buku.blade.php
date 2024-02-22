@@ -41,6 +41,7 @@
                                     <i class="fa fa-trash"></i>
                                     </button>
                                     </form>
+                                    <a class="btn btn-primary" href="{{ route('buku.edit', $b->id) }}">Edit</a>
                                         </td>
                                     </tr>
                                 @empty
