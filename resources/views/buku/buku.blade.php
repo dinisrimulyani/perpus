@@ -5,34 +5,33 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">List Buku</div>
+                    <font color="black"><h4><div class="card-header">List Buku</font></div></h4>
 
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <a href="{{ route ('buku.create') }}" class="btn btn-primary">
-                                + Tambah Data Buku
-                            </a>
-                        </div>
-
+                     <div class="card-body">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    
-                                    <th>Judul Buku</th>
-                                    <th>Penulis</th>
-                                    <th>Penerbit</th>
-                                    <th>Tahun Terbit</th>
-                                    <th>Aksi</th>
+                                <tr bgcolor='gray' align=center>
+                                    <th><font color="black">Foto Buku</font></th>
+                                    <th><font color="black">Judul</th>
+                                    <th><font color="black">Penulis</font></th>
+                                    <th><font color="black">Penerbit</font></th>
+                                    <th><font color="black">Tahun Terbit</font></th>
+                                    <th><font color="black">Aksi</font></th>
+                                </tr>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($buku as $b)
                                     <tr>
+                                    <td>
+                                    <img src="{{ asset('storage/' .$b->foto) }}" alt="Foto Buku" width="100">
+                                    </td>
                                         
-                                        <td>{{ $b->judul }}</td>
-                                        <td>{{ $b->penulis }}</td>
-                                        <td>{{ $b->penerbit }}</td>
-                                        <td>{{ $b->tahun_terbit }}</td>
+                                        <td><font color="black">{{ $b->judul }}</font></td>
+                                        <td><font color="black">{{ $b->penulis }}</font></td>
+                                        <td><font color="black">{{ $b->penerbit }}</font></td>
+                                        <td><font color="black">{{ $b->tahun_terbit }}</font></td>
                                     <td>
                                     <form action="{{route('buku.hapus', $b->id) }}" method="post">
                                     @csrf
@@ -42,7 +41,7 @@
                                     </button>
                                     
                                     <a class="btn btn-primary" href="{{ route('buku.edit', $b->id) }}">
-                                    <i class="fa fa-trash"></i>
+                                    <i class="fa fa-edit">Edit</i>
                                     </a>
                                         </td>
                                     </tr>
@@ -53,6 +52,10 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        <div class="mb-4">
+                            <a href="{{ route ('buku.create') }}" class="btn btn-primary">
+                                + Tambah Data Buku
+                            </a>
                     </div>
                 </div>
             </div>

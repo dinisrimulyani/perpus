@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body bg-white">
-                        <h1 class="h3 font-weight-bold mb-4">Tambah Data Peminjaman</h1>
+                        <font color="black"><h2 class="h3 font-weight-bold mb-4">Tambah Data Peminjaman</font></h2>
 
                         @if(session('success'))
                             <p class="text-success">{{ session('success') }}</p>

@@ -7,7 +7,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <h1 class="h3 text-2xl font-semibold mb-4">Formulir Input Buku</h1>
+                        <font color="black"><h1 class="h3 text-2xl font-semibold mb-4">Formulir Input Buku</h1></font>
                     </div>
 
                     <div class="card-body">
@@ -17,10 +17,15 @@
 
                         <form action="{{ route('buku.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
-
+                            
                             <div class="mb-4">
                                 <label for="judul" class="form-label">Judul:</label>
                                 <input type="text" name="judul" class="form-control" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="foto" class="black text-sm font- medium text-gray-700">Foto Buku:</label>
+                                <input type="file" name="foto" accept="image/*" class="mt-1 p-2 border border-gray-300 rounded-md" required>
                             </div>
 
                             <div class="mb-4">
