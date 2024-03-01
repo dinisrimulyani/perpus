@@ -5,6 +5,11 @@
                         <form action="{{route('buku.update', $buku->id)}}" method="post">
                             @csrf
                             @method ('PATCH')
+                            <div class="mb-3">
+                                <label for="foto" class="form-label">Foto Buku:</label>
+                                <input type="file" name="foto" accept="image/*" class="form-control">
+                            </div>
+
                             <div class="mb-4">
                                 <label for="judul" class="form-label">Judul:</label>
                                 <input type="text" name="judul" value="{{$buku->judul}}" class="form-control" required>
