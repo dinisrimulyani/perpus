@@ -23,7 +23,7 @@
 </head>
 
 <body id="page-top">
-
+    
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -47,7 +47,7 @@
                     <i class="fas fa-fw fa-laptop"></i>
                     <span>Dashboard</span></a>
             </li>
-
+            @role('admin')
             <!-- Divider -->
             <!-- Nav Item - Charts -->
                 <li class="nav-item">
@@ -80,7 +80,7 @@
             </div>
 
             
-
+        @endrole
         </ul>
         <!-- End of Sidebar -->
 

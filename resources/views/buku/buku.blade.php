@@ -39,6 +39,7 @@
                                     <button type="submit" class="btn btn-danger">
                                     <i class="fa fa-trash"></i>
                                     </button>
+                                    </form>
                                     
                                     <a class="btn btn-primary" href="{{ route('buku.edit', $b->id) }}">
                                     <i class="fa fa-edit">Edit</i>
