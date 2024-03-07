@@ -53,7 +53,7 @@ class BukuController extends Controller
 
         $buku->kategori()->attach($kategori);
 
-        return redirect('/buku')->with('success', 'Buku berhasil ditambahkan!');
+        return redirect('/buku')->with('success', 'Buku berhasil ditambahkann!');
     }
     
 
