@@ -1,14 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container py-5">
+<div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-            <div class="card">
-                    <div class="card-body bg-white">
-                        <h1 class="h3 font-weight-bold mb-4">Edit Data Buku</h1>
-                    </div>
-                    <div class="card-body">
+            <div class="col-md-12">
+                <div class="card">
+                    <font color="black"><h4><div class="card-header">Edit Data Buku</font></div></h4>
+
+                     <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
                         @if(session('success'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('success') }}
@@ -16,7 +18,7 @@
                         @endif
 
                        <form action="{{ route('buku.update', $buku->id) }}" method="post" enctype="multipart/form-data">
-                            @csrf
+                       @csrf
                            @method('PUT')
                             <div class="mb-3">
                                 <label for="foto" class="form-label">Foto Buku:</label>
@@ -39,8 +41,14 @@
                             </div>
 
                             <div class="mb-3">
+                                <label for="sinopsis" class="form-label">Sinopsis:</label>
+                                <input type="text" name="sinopsis" class="form-control" value="{{ $buku->sinopsis }}" required>
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="tahun_terbit" class="form-label">Tahun Terbit:</label>
                                 <select name="tahun_terbit" class="form-select custom-select" required>
+                            </div>
                                     @php
                                         $currentYear = date('Y');
                                         $startYear = 1900; 

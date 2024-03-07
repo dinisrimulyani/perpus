@@ -1,16 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
-        <div class="container">
-            <nav class="navbar navbar-dark bg-primary">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                        <b> Edit Kategori</b>
-                    </a>
-                </div>
-            </nav>
-            <br>
-                    <div class="card-body">
+<div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <font color="black"><h4><div class="card-header">Edit Kategori Buku</font></div></h4>
+
+                     <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
                         <form action="{{ route('kategori.update', $kategori->id) }}" method="post">
                             @csrf
                             <div class="mb-3">

@@ -80,7 +80,7 @@
             @foreach ($buku as $b)
             <div class="col-md-3"> <!-- Adjust the column size based on your preference -->
                 <div class="card mb-3">
-                    <img src="{{ asset('storage/'.$b->foto) }}" class="card-img-top" alt="...">
+                    <img src="{{ asset('storage/'.$b->foto) }}" style="max-width:100%; height:350px; width:300px;" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{$b->judul}}</h5>
                         <p class="card-text">{{$b->deskripsi}}</p>

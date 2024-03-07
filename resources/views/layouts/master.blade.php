@@ -70,7 +70,6 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data Peminjaman</span></a>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -81,6 +80,13 @@
 
             
         @endrole
+        @role('user')
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('peminjaman.user')}}">
+                    <i class="fas fa-fw fa-plus"></i>
+                    <span>Data Peminjaman</span></a>
+            </li>
+            @endrole
         </ul>
         <!-- End of Sidebar -->
 

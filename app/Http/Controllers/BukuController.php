@@ -31,6 +31,7 @@ class BukuController extends Controller
             'foto' => 'required|mimes:jpeg,png,jpg,gifsvg|max:2048',
             'penulis' => 'required',
             'penerbit' => 'required',
+            'sinopsis' => 'required',
             'tahun_terbit' => 'required|integer',
             'kategori_id' => 'required',
         ]);
@@ -45,6 +46,7 @@ class BukuController extends Controller
             'foto' => $fotoPath,
             'penulis' => $request->penulis,
             'penerbit' => $request->penerbit,
+            'sinopsis' => $request->sinopsis,
             'tahun_terbit' => $request->tahun_terbit,
             'aksi' => $request->aksi,
         ]);
@@ -83,6 +85,7 @@ class BukuController extends Controller
             'judul' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
+            'sinopsis' => 'required',
             'tahun_terbit' => 'required|integer',
             'kategori_id' => 'required',
         ]);
@@ -100,6 +103,7 @@ class BukuController extends Controller
         $buku->judul = $request->judul;
         $buku->penulis = $request->penulis;
         $buku->penerbit = $request->penerbit;
+        $buku->sinopsis = $request->sinopsis;
         $buku->tahun_terbit = $request->tahun_terbit;
         $buku->save();
         // Update kategori

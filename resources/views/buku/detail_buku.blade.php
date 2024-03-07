@@ -10,7 +10,7 @@
 </head>
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-3"> <!-- Adjust the column size based on your preference -->
+            <div class="col-md-4"> <!-- Adjust the column size based on your preference -->
                 <div class="card mb-3">
                 <img src="{{ asset('storage/'.$buku->foto) }}" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -21,15 +21,19 @@
                             </tr>
                             <tr>
                                 <th nowrap>Penulis: </th>
-                                <td nowrap>{{$buku->penulis}}</td>
+                                <td>{{$buku->penulis}}</td>
                             </tr>
                             <tr>
                                 <th nowrap>Penerbit: </th>
-                                <td nowrap>{{$buku->penerbit}}</td>
+                                <td>{{$buku->penerbit}}</td>
                             </tr>
                             <tr>
                                 <th nowrap>Tahun Terbit: </th>
                                 <td nowrap>{{$buku->tahun_terbit}}</td>
+                            </tr>
+                            <tr>
+                            <th nowrap>Sinopsis: </th>
+                                <td nowrap>{{$buku->sinopsis}}</td>
                             </tr>
                         </table>
                     </div>
