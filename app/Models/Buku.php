@@ -16,6 +16,7 @@ class Buku extends Model
         'foto',
         'penulis',
         'penerbit',
+        'sinopsis',
         'tahun_terbit',
     ];
 

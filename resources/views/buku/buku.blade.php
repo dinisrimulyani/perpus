@@ -16,8 +16,8 @@
                                     <th><font color="black">Judul</th>
                                     <th><font color="black">Penulis</font></th>
                                     <th><font color="black">Penerbit</font></th>
+                                    <th><font color="black">Sinopsis/Deskripsi</font></th>
                                     <th><font color="black">Tahun Terbit</font></th>
-                                    <th><font color="black">Sinopsis</font></th>
                                     <th><font color="black">Aksi</font></th>
                                 </tr>
                                 </tr>
@@ -32,8 +32,8 @@
                                         <td><font color="black">{{ $b->judul }}</font></td>
                                         <td><font color="black">{{ $b->penulis }}</font></td>
                                         <td><font color="black">{{ $b->penerbit }}</font></td>
-                                        <td><font color="black">{{ $b->tahun_terbit }}</font></td>
                                         <td><font color="black">{{ $b->sinopsis }}</font></td>
+                                        <td><font color="black">{{ $b->tahun_terbit }}</font></td>
                                     <td>
                                     <form action="{{route('buku.hapus', $b->id) }}" method="post">
                                     @csrf

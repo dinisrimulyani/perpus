@@ -42,7 +42,7 @@
 
                             <div class="mb-3">
                                 <label for="sinopsis" class="form-label">Sinopsis:</label>
-                                <input type="text" name="sinopsis" class="form-control" value="{{ $buku->sinopsis }}" required>
+                                <textarea name="sinopsis" class="form-control"  required>{{ $buku->sinopsis }}"</textarea>
                             </div>
 
                             <div class="mb-3">
