@@ -19,13 +19,18 @@
                             @csrf
                             
                             <div class="mb-4">
+                                <label for="foto" class="black text-sm font- medium text-gray-700">Foto Buku:</label>
+                                <input type="file" name="foto" accept="image/*" class="mt-1 p-2 border border-gray-300 rounded-md" required>
+                            </div>
+                            
+                            <div class="mb-4">
                                 <label for="judul" class="form-label">Judul:</label>
                                 <input type="text" name="judul" class="form-control" required>
                             </div>
 
                             <div class="mb-4">
-                                <label for="foto" class="black text-sm font- medium text-gray-700">Foto Buku:</label>
-                                <input type="file" name="foto" accept="image/*" class="mt-1 p-2 border border-gray-300 rounded-md" required>
+                                <label for="sinopsis" class="form-label">Sinopsis:</label>
+                                <input type="text" name="sinopsis" class="form-control" required>
                             </div>
 
                             <div class="mb-4">
@@ -36,11 +41,6 @@
                             <div class="mb-4">
                                 <label for="penerbit" class="form-label">Penerbit:</label>
                                 <input type="text" name="penerbit" class="form-control" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="sinopsis" class="form-label">Sinopsis:</label>
-                                <input type="text" name="sinopsis" class="form-control" required>
                             </div>
 
                             <div class="mb-4">

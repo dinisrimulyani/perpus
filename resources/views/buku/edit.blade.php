@@ -31,6 +31,11 @@
                                 </div>
 
                                 <div class="mb-3">
+                                <label for="sinopsis" class="form-label">Sinopsis:</label>
+                                <textarea name="sinopsis" class="form-control"  required>{{ $buku->sinopsis }}"</textarea>
+                            </div>
+
+                                <div class="mb-3">
                                 <label for="penulis" class="form-label">Penulis:</label>
                                 <input type="text" name="penulis" class="form-control" value="{{ $buku->penulis }}" required>
                             </div>
@@ -38,11 +43,6 @@
                             <div class="mb-3">
                                 <label for="penerbit" class="form-label">Penerbit:</label>
                                 <input type="text" name="penerbit" class="form-control" value="{{ $buku->penerbit }}" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="sinopsis" class="form-label">Sinopsis:</label>
-                                <textarea name="sinopsis" class="form-control"  required>{{ $buku->sinopsis }}"</textarea>
                             </div>
 
                             <div class="mb-3">

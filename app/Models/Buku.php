@@ -12,11 +12,11 @@ class Buku extends Model
     protected $table = 'buku';
 
     protected $fillable = [
-        'judul',
         'foto',
+        'judul',
+        'sinopsis',
         'penulis',
         'penerbit',
-        'sinopsis',
         'tahun_terbit',
     ];
 

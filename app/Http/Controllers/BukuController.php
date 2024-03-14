@@ -27,11 +27,11 @@ class BukuController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul' => 'required',
             'foto' => 'required|mimes:jpeg,png,jpg,gifsvg|max:2048',
+            'judul' => 'required',
+            'sinopsis' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
-            'sinopsis' => 'required',
             'tahun_terbit' => 'required|integer',
             'kategori_id' => 'required',
         ]);
@@ -42,11 +42,11 @@ class BukuController extends Controller
 
         //Tambah buku baru beserta kategori
         $buku = Buku::create([
-            'judul' => $request->judul,
             'foto' => $fotoPath,
+            'judul' => $request->judul,
+            'sinopsis' => $request->sinopsis,
             'penulis' => $request->penulis,
             'penerbit' => $request->penerbit,
-            'sinopsis' => $request->sinopsis,
             'tahun_terbit' => $request->tahun_terbit,
             'aksi' => $request->aksi,
         ]);
@@ -83,9 +83,9 @@ class BukuController extends Controller
     {
         $request->validate([
             'judul' => 'required',
+            'sinopsis' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
-            'sinopsis' => 'required',
             'tahun_terbit' => 'required|integer',
             'kategori_id' => 'required',
         ]);
@@ -101,9 +101,9 @@ class BukuController extends Controller
             $buku->foto = $fotoPath;
         }
         $buku->judul = $request->judul;
+        $buku->sinopsis = $request->sinopsis;
         $buku->penulis = $request->penulis;
         $buku->penerbit = $request->penerbit;
-        $buku->sinopsis = $request->sinopsis;
         $buku->tahun_terbit = $request->tahun_terbit;
         $buku->save();
         // Update kategori

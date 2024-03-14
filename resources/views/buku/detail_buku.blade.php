@@ -15,11 +15,15 @@
                 <img src="{{ asset('storage/'.$buku->foto) }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <table class="table table stripped">
-                            <tr>
+                               <tr>
                                 <th nowrap>Judul Buku: </th>
                                 <td>{{$buku->judul}}</td>
                             </tr>
                             <tr>
+                            <th nowrap>Sinopsis/Desc: </th>
+                                <td>{{$buku->sinopsis}}</td>
+                            </tr>
+                                <tr>
                                 <th nowrap>Penulis: </th>
                                 <td>{{$buku->penulis}}</td>
                             </tr>
@@ -28,14 +32,11 @@
                                 <td>{{$buku->penerbit}}</td>
                             </tr>
                             <tr>
-                            <th nowrap>Sinopsis/Desc: </th>
-                                <td>{{$buku->sinopsis}}</td>
-                                </tr>
-                                <tr>
                                 <th nowrap>Tahun Terbit: </th>
                                 <td>{{$buku->tahun_terbit}}</td>
                             </tr>
                         </table>
+                        <a href="/">Kembali</a>
                     </div>
                 </div>
             </div>
