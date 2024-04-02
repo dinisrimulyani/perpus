@@ -3,9 +3,10 @@
 @section('content')
 <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <font color="black"><h4><div class="card-header">Edit Kategori Buku</font></div></h4>
+            <div class="col-md-8">
+            <div class="card border-0 shadow-ig">
+                <div class="card-body">
+                <h3 class="card-title mb-4">Edit Kategori Buku</h3>
 
                      <div class="card-body">
                         <table class="table table-bordered">
@@ -17,6 +18,7 @@
                                 <label for="nama_kategori" class="form-label">nama kategori</label>
                                 <input type="text" value="{{$kategori->nama_kategori}}" name="nama_kategori" class="form-control"
                                     id="judul" aria-describedby="emailHelp">
+                            </div>
                             </div>
                             
                             <button type="submit" class="btn btn-primary">Update</button>

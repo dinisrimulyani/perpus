@@ -3,9 +3,11 @@
 @section('content')
     <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <font color="black"><h4><div class="card-header">Data Peminjaman</font></div></h4>
+        <div class="col-md-12">
+            <div class="card border-0 shadow-ig">
+               <div class="card-body">
+                <h3 class="card-title text-center">Data Peminjaman</h3>  
+                
                         <div class="card-body">
                         <div class="mb-4">
                         @if(session('success'))
@@ -18,10 +20,10 @@
                             <a href="{{ route('peminjaman.tambah') }}" class="btn btn-primary">
                                 + Tambah Data Peminjaman
                             <a href="{{route ('print') }}" class="btn btn-primary">
-                            <i class="fa fa-download"></i> Exspor PDF</a>
+                            <i class="bi bi-filetype-pdf"></i> Exspor PDF</a>
                           </div>
 
-
+                    <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
@@ -30,6 +32,7 @@
                                     <th class="px-4 py-2"><font color="black">Buku yang Dipinjam</font></th>
                                     <th class="px-4 py-2"><font color="black">Tanggal Peminjaman</font></th>
                                     <th class="px-4 py-2"><font color="black">Tanggal Pengembalian</font></th>
+                                    <th class="px-4 py-2"><font color="black">Tanggal Sekarang</font></th>
                                     <th class="px-4 py-2"><font color="black">Status</font></th>
                                     <th class="px-4 py-2"><font color="black">Aksi</font></th>
                                 </tr>
@@ -41,9 +44,18 @@
                                         <td class="px-4 py-2"><font color="black">{{ $p->user->name }}</font></td>
                                         <td class="px-4 py-2"><font color="black">{{ $p->buku->judul }}</font></td>
                                         <td class="px-4 py-2"><font color="black">{{ $p->tanggal_peminjaman }}</font></td>
-                                        <td class="px-4 py-2"><font color="black">{{ $p->tanggal_pengembalian }}</font></td>
-                                        <td class="px-4 py-2"><font color="black">{{ $p->status }}</font></td>
+                                        <td class="px-4 py-2"><font color="black">{{ $p->tanggal_pengembalian ?? 'Belum Dikembalikan'}}</font></td>
+                                        <td class="px-4 py-2"><font color="black">{{ $p->sekarang }}</font></td>
                                         <td class="px-4 py-2">
+                                            @if($p->status === 'Dipinjam')
+                                            <span class="badge bg-warning">{{ $p->status}}</span>
+                                            @elseif($p->status === 'Dikembalikan')
+                                            <span class="badge bg-primary">{{ $p->status}}</span>
+                                            @elseif($p->status === 'Denda')
+                                            <span class="badge bg-danger">{{ $p->status}}</span>
+                                            @endif
+                                            </td>
+                                            <td class="px-4 py-2">
                                             @if($p->status === 'Dipinjam')
                                                 <form action="{{ route('peminjaman.kembalikan', $p->id) }}" method="post">
                                                     @csrf
@@ -62,6 +74,7 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

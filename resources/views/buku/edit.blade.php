@@ -3,11 +3,12 @@
 @section('content')
 <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <font color="black"><h4><div class="card-header">Edit Data Buku</font></div></h4>
-
-                     <div class="card-body">
+            <div class="col-md-13">
+            <div class="card border-0 shadow-ig">
+                <div class="card-body">
+                <h3 class="card-title text-center">Edit Data Buku</h3> 
+                    </div>
+                    <div class="card-body">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>

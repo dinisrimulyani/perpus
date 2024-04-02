@@ -3,10 +3,10 @@
 @section('content')
     <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body bg-white">
-                        <font color="black"><h2 class="h3 font-weight-bold mb-4">Tambah Data Peminjaman</font></h2>
+        <div class="col-md-8">
+            <div class="card border-0 shadow-ig">
+               <div class="card-body">
+                <h3 class="card-title text-center">Tambah Data Peminjaman</h3> 
 
                         @if(session('success'))
                             <p class="text-success">{{ session('success') }}</p>
@@ -33,15 +33,17 @@
                                 </select>
                             </div>
 
-
                             <div class="mb-3">
                                 <label for="tanggal_peminjaman" class="form-label">Tanggal Peminjaman:</label>
-                                <input type="date" required name="tanggal_peminjaman" id="tanggal_peminjaman" class="form-control">
+                                <input type="date" required name="tanggal_peminjaman" id="tanggal_peminjaman"
+                                    class="form-control" value="{{ date('Y-m-d') }}" readonly>
                             </div>
 
                             <div class="mb-3">
                                 <label for="tanggal_pengembalian" class="form-label">Tanggal Pengembalian:</label>
-                                <input type="date" required name="tanggal_pengembalian" id="tanggal_pengembalian" class="form-control">
+                                <input type="date" required name="tanggal_pengembalian" id="tanggal_pengembalian"
+                                    class="form-control"
+                                    value="{{ \Carbon\Carbon::parse(date('Y-m-d'))->addDays(4)->format('Y-m-d') }}">
                             </div>
 
                             <button type="submit" class="btn btn-primary">Simpan</button>

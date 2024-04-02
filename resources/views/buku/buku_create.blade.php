@@ -4,12 +4,11 @@
 
     <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">
-                        <font color="black"><h1 class="h3 text-2xl font-semibold mb-4">Formulir Input Buku</h1></font>
+        <div class="col-md-10">
+            <div class="card border-0 shadow-ig">
+               <div class="card-body">
+                <h3 class="card-title text-center">Formulir Input Data</h3>  
                     </div>
-
                     <div class="card-body">
                         @if(session('success'))
                             <p class="text-success">{{ session('success') }}</p>

@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <font color="black"><h1 class="h3 text-2xl font-semibold mb-4">Formulir Input Kategori</font></h1>
+                    <h2 class="card-title mb-4">Formulir Input Data</h2>
                     </div>
 
                     <div class="card-body">
