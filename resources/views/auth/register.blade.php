@@ -24,7 +24,8 @@
                 <a href="index.html"><img src="./assets/compiled/svg/logo.svg" alt="Logo"></a>
             </div>
             <h1 class="auth-title">Sign Up</h1>
-            <p class="auth-subtitle mb-5">Input your data to register to our website.</p>
+            <p class="auth-subtitle mb-5">Welcome To SD Negeri Suka Membaca
+            Digital Library</p>
             <form method="POST" action="{{ route('register') }}">
                         @csrf
 

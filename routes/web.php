@@ -55,6 +55,7 @@ Route::middleware(['auth', 'role:petugas|admin'])->group(function () {
     Route::post('/peminjaman/store', [PeminjamanController::class, 'storePeminjaman'])->name('peminjaman.store');
     Route::post('/peminjaman/selesai/{id}', [PeminjamanController::class, 'kembalikanBuku'])->name('peminjaman.kembalikan');
     Route::get('/report',[PeminjamanController::class, 'print'])->name('print');
+    Route::get('/peminjaman/denda/{id}', [PeminjamanController::class, 'bayarDenda'])->name('peminjaman.denda');
 });
 
 //user  

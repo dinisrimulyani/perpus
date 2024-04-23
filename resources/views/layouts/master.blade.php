@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="{{asset ('assets/compiled/css/app.css') }}">
   <link rel="stylesheet" href="{{asset ('assets/compiled/css/app-dark.css') }}">
   <link rel="stylesheet" href="{{asset ('assets/compiled/css/iconly.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
 </head>
 
 <body>
@@ -24,8 +27,8 @@
             <div class="sidebar-wrapper active">
     <div class="sidebar-header position-relative">
         <div class="d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <img src="{{asset ('assets/compiled/jpg/perpus.png') }}">
+        <div class="auth-logo">
+                <a href="index.html"><img src="./assets/compiled/svg/logo.svg" alt="Logo"></a>
             </div>
             <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
@@ -140,6 +143,7 @@
             
 <div class="page-heading">
     <h3>DIGITAL LIBRARY</h3>
+    <h3>SUKA MEMBACA</h3>
 </div> 
 <div class="page-content"> 
                                @yield('content')

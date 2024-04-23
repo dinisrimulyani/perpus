@@ -89,4 +89,13 @@ public function userPeminjaman()
 
         return view('peminjaman.anggota', compact('peminjaman'));
     }
+    public function bayarDenda($id){
+
+        $peminjaman = Peminjaman::findOrFail($id);
+        $peminjaman->status = 'Dikembalikan';
+        $peminjaman->sekarang = now();
+        $peminjaman->save();
+
+        return redirect()->route('peminjaman.index')->with('success', 'Denda berhasil dibayar');
+  }    
 }
