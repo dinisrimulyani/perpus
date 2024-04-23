@@ -27,6 +27,7 @@
                     <table class="table table-bordered">
 <thead>
     <tr>
+    <tr bgcolor='gray' align=center>
         <th><font color="black">Nama Peminjam</font></th>
         <th><font color="black">Buku yang Dipinjam</font></th>
         <th><font color="black">Tanggal Peminjaman</font></th>
@@ -34,6 +35,7 @@
         <th><font color="black">Tanggal Pengembalian</font></th>
         <th><font color="black">Status</font></th>
         <th><font color="black">Aksi</font></th>
+    </tr>
     </tr>
 </thead>
 <tbody>
