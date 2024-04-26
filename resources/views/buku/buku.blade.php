@@ -7,7 +7,11 @@
             <div class="card border-0 shadow-ig">
                 <div class="card-body">
                 <h3 class="card-title text-center">List Buku</h3>  
-
+                @if(session('success'))
+                <div class="alert alert-success"role="alert">
+                {{session('success')}}
+                </div>
+                @endif
                 <div class="card-body">          
                 <div class="mb-4">
                             <a href="{{ route ('buku.create') }}" class="btn btn-primary">

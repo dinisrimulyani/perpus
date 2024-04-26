@@ -52,11 +52,9 @@ class BukuController extends Controller
         ]);
 
         $buku->kategori()->attach($kategori);
-
+ 
         return redirect('/buku')->with('success', 'Buku berhasil ditambahkann!');
     }
-    
-
     public function welcome(){
         $buku = Buku::all();
         return view('welcome', ['buku' => $buku]);
